@@ -1,4 +1,4 @@
-## Learning to construct sequential events
+## Hippocampo-neocortical interaction as compressive retrieval-augmented generation
 
 Code for the paper 'Hippocampo-neocortical interaction as compressive retrieval-augmented generation'.
 
