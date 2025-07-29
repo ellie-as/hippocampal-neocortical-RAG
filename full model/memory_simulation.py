@@ -178,7 +178,10 @@ class MemorySimulator:
                 max_new_tokens=self.cfg.max_new_tokens,
                 pad_token_id=self.llm_tok.pad_token_id,
             )
-        return self.llm_tok.decode(out[0], skip_special_tokens=True)
+    
+        gen_ids = out[0][ids.shape[1]:]          # keep only the continuation
+        return self.llm_tok.decode(gen_ids, skip_special_tokens=True).strip()
+
 
 
     def simulate_encoding(self, stories: List[str]) -> Dict:

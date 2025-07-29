@@ -77,7 +77,7 @@ def plot_similarity_memory(enc: Dict, originals: List[str],
     for i, orig in enumerate(originals):
         emb_o = embedder.encode(orig)
         img_version = recalled["imagined"][i]
-        img_version = img_version[img_version.index('[/INST]') + 7:]
+        #img_version = img_version[img_version.index('[/INST]') + 7:]
         sims_img.append(cos_sim(emb_o, embedder.encode(img_version)))
         full_lens.append(len(tokenizer(orig)["input_ids"]))
         for n in n_lvls:
