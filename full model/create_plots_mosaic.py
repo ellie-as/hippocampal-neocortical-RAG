@@ -41,27 +41,73 @@ Return ONLY a JSON dictionary with 3 keys, each a float 0-1:
 A higher score corresponds to more concrete, richer in detail, or more specific text."""
 
 
-def plot_consolidation(con: Dict, outdir: Path) -> None:
+# def plot_consolidation(con: Dict, outdir: Path) -> None:
+#     con["epoch_dist_orig"] = [[1 - v for v in d] for d in con["epoch_dist_orig"]]
+#     con["epoch_dist_enc"]  = [[1 - v for v in d] for d in con["epoch_dist_enc"]]
+    
+#     epochs = np.arange(1, len(con["epoch_dist_orig"]) + 1)
+#     mu_o   = [np.mean(d) for d in con["epoch_dist_orig"]]
+#     se_o   = [sem(d)     for d in con["epoch_dist_orig"]]
+#     mu_e   = [np.mean(d) for d in con["epoch_dist_enc"]]
+#     se_e   = [sem(d)     for d in con["epoch_dist_enc"]]
+
+#     plt.figure(figsize=(6, 3))
+#     plt.errorbar(epochs[0:8], mu_o[0:8], yerr=se_o[0:8], marker="o", label="Original", capsize=5)
+#     plt.errorbar(epochs[0:8], mu_e[0:8], yerr=se_e[0:8], marker="s", label="Encoded", capsize=5)
+#     plt.xlabel("Epoch"); plt.ylabel("Cosine similarity")
+#     plt.title("b)   Recall performance vs. consolidation", pad=12)
+#     plt.ylim(0.68, 0.9)
+#     plt.legend()
+#     plt.tight_layout()
+#     plt.savefig(outdir / "recall_drift_posthoc.png", dpi=300, bbox_inches="tight")
+#     plt.close()
+
+def plot_consolidation(con: dict, outdir: Path) -> None:
     con["epoch_dist_orig"] = [[1 - v for v in d] for d in con["epoch_dist_orig"]]
     con["epoch_dist_enc"]  = [[1 - v for v in d] for d in con["epoch_dist_enc"]]
-    
-    epochs = np.arange(1, len(con["epoch_dist_orig"]) + 1)
-    mu_o   = [np.mean(d) for d in con["epoch_dist_orig"]]
-    se_o   = [sem(d)     for d in con["epoch_dist_orig"]]
-    mu_e   = [np.mean(d) for d in con["epoch_dist_enc"]]
-    se_e   = [sem(d)     for d in con["epoch_dist_enc"]]
 
+    data_dir  = outdir.parent / "data"
+    enc_path  = data_dir / "recalled_stories.pkl"
+    try:
+        enc = pickle.load(open(enc_path, "rb"))
+        imag      = enc["recalled_stories"]["imagined"]     # before training
+        originals = enc["recalled_stories"]["full"]         # ground‑truth
+        encoded   = enc["recalled_stories"][0]              # gist that Mistral trains on
+
+        embedder  = SentenceTransformer("all-MiniLM-L6-v2")
+        cos       = lambda a, b: 1 - cos_dist(a, b)
+
+        sim_o0 = [cos(embedder.encode(i), embedder.encode(o))
+                  for i, o in zip(imag, originals)]
+        sim_e0 = [cos(embedder.encode(i), embedder.encode(g))
+                  for i, g in zip(imag, encoded)]
+
+        mu_o = [np.mean(sim_o0)] + [np.mean(d) for d in con["epoch_dist_orig"]]
+        se_o = [sem(sim_o0)]     + [sem(d)     for d in con["epoch_dist_orig"]]
+        mu_e = [np.mean(sim_e0)] + [np.mean(d) for d in con["epoch_dist_enc"]]
+        se_e = [sem(sim_e0)]     + [sem(d)     for d in con["epoch_dist_enc"]]
+    except FileNotFoundError:
+        # fallback: keep the original behaviour
+        mu_o = [np.mean(d) for d in con["epoch_dist_orig"]]
+        se_o = [sem(d)     for d in con["epoch_dist_orig"]]
+        mu_e = [np.mean(d) for d in con["epoch_dist_enc"]]
+        se_e = [sem(d)     for d in con["epoch_dist_enc"]]
+
+    # ── 3. plot, labelling the new first point as epoch 0 ────────────────────
+    epochs = np.arange(0, len(mu_o))
     plt.figure(figsize=(6, 3))
-    plt.errorbar(epochs[0:8], mu_o[0:8], yerr=se_o[0:8], marker="o", label="Original", capsize=5)
-    plt.errorbar(epochs[0:8], mu_e[0:8], yerr=se_e[0:8], marker="s", label="Encoded", capsize=5)
-    plt.xlabel("Epoch"); plt.ylabel("Cosine similarity")
+    plt.errorbar(epochs[:9], mu_o[:9], yerr=se_o[:9],
+                 marker="o", label="Original", capsize=5)
+    plt.errorbar(epochs[:9], mu_e[:9], yerr=se_e[:9],
+                 marker="s", label="Encoded", capsize=5)
+    plt.xlabel("Epoch")
+    plt.ylabel("Cosine similarity")
     plt.title("b)   Recall performance vs. consolidation", pad=12)
-    plt.ylim(0.68, 0.9)
+    plt.ylim(0.63, 0.9)
     plt.legend()
     plt.tight_layout()
     plt.savefig(outdir / "recall_drift_posthoc.png", dpi=300, bbox_inches="tight")
     plt.close()
-
 
 def plot_similarity_memory(enc: Dict, originals: List[str],
                            tokenizer_name: str, outdir: Path) -> None:
@@ -100,7 +146,7 @@ def plot_similarity_memory(enc: Dict, originals: List[str],
             color=sim_color, alpha=.9, capsize=5)
     ax1.set_ylabel("Similarity", color=sim_color)
     ax1.tick_params(axis='y', colors=sim_color)
-    ax1.set_ylim(0.6, 1.02)
+    ax1.set_ylim(0.63, 1.02)
 
     ax2 = ax1.twinx()
     ax2.bar(x + width/2, mean_mem, width, yerr=err_mem,
@@ -181,7 +227,7 @@ def plot_forgetting(forg: Dict, outdir: Path) -> None:
     plt.ylabel("Cosine similarity")
     plt.title("c)   Simulating forgetting", pad=12)
     plt.legend()
-    plt.ylim(0.68, 0.9)
+    plt.ylim(0.63, 0.9)
     plt.tight_layout()
     plt.savefig(outdir / "forgetting_curve_posthoc.png",
                 dpi=300, bbox_inches="tight")
