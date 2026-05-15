@@ -211,3 +211,4 @@ __marimo__/
 inference/_cache/layer_points_500.pkl
 inference/_cache/spatial_reps.json
 inference/_cache/family_reps.json
+.DS_Store
