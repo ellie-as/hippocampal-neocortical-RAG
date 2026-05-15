@@ -1,0 +1,5 @@
+Error type,Story type,Value type,Proportion,95% CI
+Omission errors,Incomplete,Mean,0.37,0.0962814661603955
+Extension errors,Incomplete,Mean,0.63,0.0962814661603955
+Omission errors,Updated,Mean,0.59,0.09808204052531282
+Extension errors,Updated,Mean,0.41,0.09808204052531283

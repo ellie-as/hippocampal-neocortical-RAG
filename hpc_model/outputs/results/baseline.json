@@ -1,0 +1,26 @@
+{
+  "n": 100,
+  "cfg": {
+    "decay_rate": 0.9,
+    "beta": 400.0,
+    "selection_method": "auto_mhn",
+    "n_auto_iters": 1,
+    "hard_hetero": false,
+    "denoise_after_hetero": false,
+    "n_hetero_iters": 1,
+    "max_chars": 60,
+    "hpc_dim": 512,
+    "proj_seed": 0,
+    "details_seed": 42,
+    "details_max_len": 40
+  },
+  "selection_accuracy": {
+    "count": 100,
+    "rate": 1.0
+  },
+  "recall_accuracy_canon": {
+    "count": 100,
+    "rate": 1.0
+  },
+  "mismatches": []
+}

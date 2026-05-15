@@ -1,0 +1,85 @@
+
+[extremes] Stagewise forgetting extremes (delta similarity per transition)
+          fastest forgetting = most negative Δ(similarity)
+          slowest forgetting = most positive Δ(similarity)
+
+Episode 0 → 1 | FASTEST: item_id=201  Δsim=-0.4158  sim=0.8631→0.4472
+  ORIGINAL: I have a huge Disney bag that I bought five years ago. I've been using it ever since I bought it, and it hasn't even faded. I keep it in my closet when I'm not using it that day. I want a new one, but I love this one too much. I am keeping the bag to give to my daughter someday.
+  RECALL@prev: I have a huge Disney bag that I bought five years ago. It was a big bag, and I used it a lot. But then, I started to notice that it was getting old. The colors were fading, and the material was starting to tear. I tried to mend it, but it was no use. I ended up throwing it away. But before I did, I took a picture of it as a memory.
+  RECALL@curr: I have a huge Disney bag that I bought five years ago. Recently, I decided to use it to pack for a trip. I packed my bag with my laptop, a water bottle, and some snacks. When I went through security at the airport, they made me take my bag out of the Disney bag. They swabbed the Disney bag for explosives, and it set off the alarm. I had to take out …
+
+Episode 0 → 1 | SLOWEST: item_id=496  Δsim=+0.2600  sim=0.5984→0.8584
+  ORIGINAL: The kids were listening to the radio. A song came on that they all liked. THeir mom said the lyrics were bad. She yelled at them to turn it off. The kids turned the sound down.
+  RECALL@prev: The kids were listening to the radio. They were dancing and having fun. Suddenly, the radio announced that there was a bear in the woods. The kids stopped dancing and listened carefully. The radio said that the bear was not dangerous and was just wandering around. The kids resumed their dancing.
+  RECALL@curr: The kids were listening to the radio. Their parents told them to turn it off. They turned it off. Their parents praised them for listening to their requests. They turned the radio back on. Their parents requested a specific song. They found the song on the radio. Their parents were happy. They all sang along to the song.
+
+Episode 1 → 2 | FASTEST: item_id=106  Δsim=-0.2798  sim=0.7934→0.5136
+  ORIGINAL: John was going to school. John was at the door where the person checked for id. John had uncontrollable diarrhea. John had pooped his pants. John was so embarrassed that he went home.
+  RECALL@prev: John was going to school. He had a diarrhea problem. He had to go to the bathroom. He went to the bathroom. He took a long time. He came back to class. He was late. He got detention. He had to write a essay. He was unhappy. He finished the essay. He was glad it was over.
+  RECALL@curr: John was going to school. He was wearing his hat. The wind took his hat. He ran after the wind. He got his hat. He wore his hat the rest of the day. He went home and went to bed. He woke up the next day. He didn't have his hat. He went to school without a hat. He realized he had worn his hat to bed. He went home and went to bed. He woke up the next …
+
+Episode 1 → 2 | SLOWEST: item_id=419  Δsim=+0.4489  sim=0.3752→0.8241
+  ORIGINAL: James has a big test coming up. James spends all of his time studying. The day of the test arrives. James takes the test. James gets his grade back and learns he did not pass.
+  RECALL@prev: James has a big test coming up. He prepared by studying. He studied by reading his textbook. He read his textbook by taking good notes. He took good notes by using abbreviations. He used abbreviations by making them up. He made up abbreviations by combining two words. He combined two words by using a thesaurus. He used a thesaurus by looking up syn …
+  RECALL@curr: James has a big test coming up. He studied all night. In the morning, he realized he forgot his test. He had to run home to get it. He got to school just in time. He took the test, and did well. He passed the class with a narrow margin. James learned to always pack his things before tests.
+
+Episode 2 → 3 | FASTEST: item_id=177  Δsim=-0.3493  sim=0.7305→0.3812
+  ORIGINAL: Two weeks ago we went to Friendly's for breakfast. The prices were half off during weekdays. There were many regulars at the restaurant. I had an omelet and my wife had bacon and eggs. We were lukewarm about the food, but loved the prices.
+  RECALL@prev: Two weeks ago we went to Friendly's for breakfast. My wife ordered a breakfast sandwich. She took a bite and it was delicious. For her birthday she wanted dessert. She ordered a cake. It was a delicious cake. My wife was happy. We went home.
+  RECALL@curr: Two weeks ago we went to Friendly's for breakfast. The waitress gave me a very rude welcome. She acted like she didn't want to be there. She didn't smile or say a word to me. She didn't even look at me when she asked me a question. I decided to give her a tip anyway. When we were leaving she said "Have a nice day" in a very sarcastic tone. I didn't …
+
+Episode 2 → 3 | SLOWEST: item_id=241  Δsim=+0.3296  sim=0.4104→0.7399
+  ORIGINAL: I got an email from a friend the other week. It was very nice to hear from them so I was pleased! I replied right away and asked them how they're doing. They replied the next day and said they were doing good. The email was a very nice surprise so I was very happy with it.
+  RECALL@prev: I got an email from a friend the other week. They told me they were injured. They were injured in a car accident. They were injured because they were drunk. They lost their driver's license. They have to go to rehab. They will be fine. I wish them the best.
+  RECALL@curr: I got an email from a friend the other week. They were writing about how they were feeling. They were feeling very emotional. They were crying while writing the email. They were feeling better after crying. They were hoping I was doing well. I was doing well. I was happy to hear from them. I was looking forward to seeing them soon.
+
+Episode 3 → 4 | FASTEST: item_id=218  Δsim=-0.3543  sim=0.6063→0.2520
+  ORIGINAL: My daughter and her husband are renting a house in Queens. One day the pipe under the sink had a slow leak. My daughter called the landlord. He told her to put a bucket under the pipe. My daughter's husband replaced the pipe himself.
+  RECALL@prev: My daughter and her husband are renting a house in Queens. They noticed a leak in the ceiling. They called their landlord and the landlord did not call a plumber. The leak got worse and water was coming down fast. They called the landlord again and the landlord called a plumber. The plumber fixed the leak and they paid the plumber. The landlord ref …
+  RECALL@curr: My daughter and her husband are renting a house in Queens. A bee kept buzzing near their door. They tried to keep it out by closing the door. But the bee kept coming back. Eventually they stopped seeing the bee and it stopped coming near their door.
+
+Episode 3 → 4 | SLOWEST: item_id=177  Δsim=+0.3351  sim=0.3812→0.7163
+  ORIGINAL: Two weeks ago we went to Friendly's for breakfast. The prices were half off during weekdays. There were many regulars at the restaurant. I had an omelet and my wife had bacon and eggs. We were lukewarm about the food, but loved the prices.
+  RECALL@prev: Two weeks ago we went to Friendly's for breakfast. The waitress gave me a very rude welcome. She acted like she didn't want to be there. She didn't smile or say a word to me. She didn't even look at me when she asked me a question. I decided to give her a tip anyway. When we were leaving she said "Have a nice day" in a very sarcastic tone. I didn't …
+  RECALL@curr: Two weeks ago we went to Friendly's for breakfast. The food was not good. I had a hard time finishing my meal. I didn't want to be rude, so I forced myself to eat it. I won't be going back to Friendly's any time soon.
+
+Episode 4 → 5 | FASTEST: item_id=387  Δsim=-0.3272  sim=0.4871→0.1600
+  ORIGINAL: I am sitting at a desk. I turned on the computer. There was a picture of a monkey on it. I clicked on the picture of the monkey. I saved it as the background.
+  RECALL@prev: I am sitting at a desk. A fly came into the room. I watched as it flew around. It landed on the window. I opened the window. The fly flew out. I closed the window and sat back in my seat. I was watching a fly, after all.
+  RECALL@curr: I am sitting at a desk. A kid is trying to convince me to play a game. I keep telling him I don't have any cards. He insists on trading with me. I eventually give in and play the game. I end up winning the game. The kid is so mad but can't complain since he started it. I then leave the table and walk away.
+
+Episode 4 → 5 | SLOWEST: item_id=218  Δsim=+0.4136  sim=0.2520→0.6656
+  ORIGINAL: My daughter and her husband are renting a house in Queens. One day the pipe under the sink had a slow leak. My daughter called the landlord. He told her to put a bucket under the pipe. My daughter's husband replaced the pipe himself.
+  RECALL@prev: My daughter and her husband are renting a house in Queens. A bee kept buzzing near their door. They tried to keep it out by closing the door. But the bee kept coming back. Eventually they stopped seeing the bee and it stopped coming near their door.
+  RECALL@curr: My daughter and her husband are renting a house in Queens. A leak started from the ceiling. The landlord didn't respond to their calls. They called the superintendent. The superintendent got the landlord to send a plumber. The plumber found that the leak was from the apartment above. The landlord didn't know the apartment was rented. The landlord d …
+
+Episode 5 → 6 | FASTEST: item_id=241  Δsim=-0.3991  sim=0.6885→0.2893
+  ORIGINAL: I got an email from a friend the other week. It was very nice to hear from them so I was pleased! I replied right away and asked them how they're doing. They replied the next day and said they were doing good. The email was a very nice surprise so I was very happy with it.
+  RECALL@prev: I got an email from a friend the other week. They were asking how I was doing. We chatted for a bit in the email. Then they mentioned they had a new pet. They ended the email with a question for me. I ended up responding with a long email. In the end, we both learned a lot about each other. I now consider that email a friend. And I'm very grateful …
+  RECALL@curr: I got an email from a friend the other week. We went out for lunch. I ordered a burger. But, I thought it was going to be spicy. So, I was afraid. I ate most of it anyway. Then, I threw up most of the meal afterwards. I learned that it wasn't spicy at all. I was just afraid for no reason.
+
+Episode 5 → 6 | SLOWEST: item_id=324  Δsim=+0.2643  sim=0.4534→0.7177
+  ORIGINAL: Andrew was building something in his backyard. It was going to be a jungle gym for his kids. He bolted the beams together. His kids were so excited when they saw it coming together. They couldn't wait to play!
+  RECALL@prev: Andrew was building something in his backyard. He was trying to use his miter saw but it kept making a terrible screeching sound. He tried applying oil to the saw but the sound didn't go away. Andrew ended up having to replace the saw. Now he uses a new one that doesn't make any noise at all. Andrew was happy with the new saw but wasn't thrilled ab …
+  RECALL@curr: Andrew was building something in his backyard. He was excited about the project. He had been planning it in his mind for weeks. He had an old shed that he was going to turn into something special. He worked on it for hours. When he was finished, he had created a miniature golf course. Andrew was happy with how it turned out. He had a lot of fun usi …
+
+Episode 6 → 7 | FASTEST: item_id=1  Δsim=-0.2715  sim=0.7662→0.4947
+  ORIGINAL: Tanya had just turned sixteen. Her mom would never let her dye her hair before she was this old. She already knew what color she wanted and everything. Yet at the last moment she had her doubts. She decided to give her own natural hair color a chance.
+  RECALL@prev: Tanya had just turned sixteen. She went to the hairdresser and had her hair curled. She was happy with the way she looked in the mirror. She had finally gotten her first permanent wave. She couldn't believe how much she had grown up. She went home and looked in the mirror for hours. She had never felt more beautiful. The next day, she went to the b …
+  RECALL@curr: Tanya had just turned sixteen. She went to the local coffee shop. She ordered a latte. She was trying to get the barista to stamp her passport. She wanted it to be a surprise for her travelings. She didn't want to tell him where she was going. The barista didn't ask any questions. She got her latte with a passport stamp. She couldn't believe how lu …
+
+Episode 6 → 7 | SLOWEST: item_id=241  Δsim=+0.3988  sim=0.2893→0.6881
+  ORIGINAL: I got an email from a friend the other week. It was very nice to hear from them so I was pleased! I replied right away and asked them how they're doing. They replied the next day and said they were doing good. The email was a very nice surprise so I was very happy with it.
+  RECALL@prev: I got an email from a friend the other week. We went out for lunch. I ordered a burger. But, I thought it was going to be spicy. So, I was afraid. I ate most of it anyway. Then, I threw up most of the meal afterwards. I learned that it wasn't spicy at all. I was just afraid for no reason.
+  RECALL@curr: I got an email from a friend the other week. They shared a funny meme with me. I laughed out loud when I saw it. They asked how I was doing. I replied that I was doing well. We both laughed about how crazy our lives were. I looked forward to seeing them later.
+
+Episode 7 → 8 | FASTEST: item_id=185  Δsim=-0.2929  sim=0.7665→0.4736
+  ORIGINAL: Mary works as a marketing executive at a company downtown. She's very good at her job. Her boss noticed how good she's been doing. Mary was called into her boss's office. Mary was promoted to Marketing Manager!
+  RECALL@prev: Mary works as a marketing executive at a company downtown. She is working on a project to improve her company's online presence. She has been reading a lot of blogs about marketing and social media. She has a good idea for a viral video. She will go into more detail in her next report.
+  RECALL@curr: Mary works as a marketing executive at a company downtown. She has a co-worker who goes to the zoo every weekend. He brings home a new pet every week. Mary wants to spread the cost of his pets over the year. She comes up with a plan to get all the pets for him. She buys a parrot, a monkey, and a lion. She surprises him with them. He is happy with t …
+
+Episode 7 → 8 | SLOWEST: item_id=216  Δsim=+0.2794  sim=0.5643→0.8437
+  ORIGINAL: Kia's family moved across the country. Kia had to start at a new school. She was very nervous on her first day. But by lunchtime, she was relaxed and happy. She'd found that the students were all very friendly!
+  RECALL@prev: Kia's family moved across the country. They went from California to Florida. They went to the beach in Florida. Kia's mom took a photo of the family. She took a photo of the water. She took a photo of the beach. She took a lot of photos. The family was really close. She took a photo of them. She took a photo of them. She took a lot of photos. She t …
+  RECALL@curr: Kia's family moved across the country. They were sad to leave their friends behind. Kia was excited to go to a new school. She worked hard to make friends there. Now she has friends all over the country.
+

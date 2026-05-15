@@ -1,0 +1,23 @@
+Epoch,series,Accuracy
+0,Semantic memory,0.46
+1,Semantic memory,0.6
+2,Semantic memory,0.6
+3,Semantic memory,0.64
+4,Semantic memory,0.68
+5,Semantic memory,0.7
+6,Semantic memory,0.68
+7,Semantic memory,0.68
+8,Semantic memory,0.68
+9,Semantic memory,0.68
+10,Semantic memory,0.7
+0,Chance,0.3333333333333333
+1,Chance,0.3333333333333333
+2,Chance,0.3333333333333333
+3,Chance,0.3333333333333333
+4,Chance,0.3333333333333333
+5,Chance,0.3333333333333333
+6,Chance,0.3333333333333333
+7,Chance,0.3333333333333333
+8,Chance,0.3333333333333333
+9,Chance,0.3333333333333333
+10,Chance,0.3333333333333333

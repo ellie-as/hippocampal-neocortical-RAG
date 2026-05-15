@@ -1,0 +1,80 @@
+{
+  "cfg": {
+    "decay_rate": 0.9,
+    "selection_method": "auto_mhn",
+    "n_auto_iters": 1,
+    "max_chars": 60,
+    "hard_hetero": false,
+    "hpc_dim": 512,
+    "proj_seed": 0,
+    "details_seed": 42,
+    "details_max_len": 40
+  },
+  "rows": [
+    {
+      "beta": 5.0,
+      "selection_rate": 0.01,
+      "recall_rate": 0.0
+    },
+    {
+      "beta": 10.0,
+      "selection_rate": 0.01,
+      "recall_rate": 0.0
+    },
+    {
+      "beta": 20.0,
+      "selection_rate": 0.73,
+      "recall_rate": 0.0
+    },
+    {
+      "beta": 30.0,
+      "selection_rate": 0.98,
+      "recall_rate": 0.0
+    },
+    {
+      "beta": 50.0,
+      "selection_rate": 1.0,
+      "recall_rate": 0.0
+    },
+    {
+      "beta": 80.0,
+      "selection_rate": 1.0,
+      "recall_rate": 0.0
+    },
+    {
+      "beta": 100.0,
+      "selection_rate": 1.0,
+      "recall_rate": 0.0
+    },
+    {
+      "beta": 120.0,
+      "selection_rate": 1.0,
+      "recall_rate": 0.0
+    },
+    {
+      "beta": 150.0,
+      "selection_rate": 1.0,
+      "recall_rate": 0.0
+    },
+    {
+      "beta": 200.0,
+      "selection_rate": 1.0,
+      "recall_rate": 0.71
+    },
+    {
+      "beta": 300.0,
+      "selection_rate": 1.0,
+      "recall_rate": 1.0
+    },
+    {
+      "beta": 400.0,
+      "selection_rate": 1.0,
+      "recall_rate": 1.0
+    },
+    {
+      "beta": 600.0,
+      "selection_rate": 1.0,
+      "recall_rate": 1.0
+    }
+  ]
+}

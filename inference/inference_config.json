@@ -1,0 +1,8 @@
+{
+  "spatial_model_dir": "inference/outputs_graph",
+  "family_model_dir": "inference/outputs_tree",
+  "cache_dir": "inference/data/rel_inf_cache",
+  "figures_dir": "figures",
+  "data_dir": "inference/data",
+  "seed": 321
+}

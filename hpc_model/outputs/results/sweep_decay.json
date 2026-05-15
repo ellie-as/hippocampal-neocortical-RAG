@@ -1,0 +1,70 @@
+{
+  "cfg": {
+    "beta": 200.0,
+    "selection_method": "auto_mhn",
+    "n_auto_iters": 1,
+    "max_chars": 60,
+    "hard_hetero": false,
+    "hpc_dim": 512,
+    "proj_seed": 0,
+    "details_seed": 42,
+    "details_max_len": 40
+  },
+  "rows": [
+    {
+      "decay_rate": 0.2,
+      "selection_rate": 1.0,
+      "recall_rate": 1.0
+    },
+    {
+      "decay_rate": 0.3,
+      "selection_rate": 1.0,
+      "recall_rate": 1.0
+    },
+    {
+      "decay_rate": 0.4,
+      "selection_rate": 1.0,
+      "recall_rate": 1.0
+    },
+    {
+      "decay_rate": 0.5,
+      "selection_rate": 1.0,
+      "recall_rate": 1.0
+    },
+    {
+      "decay_rate": 0.6,
+      "selection_rate": 1.0,
+      "recall_rate": 1.0
+    },
+    {
+      "decay_rate": 0.7,
+      "selection_rate": 1.0,
+      "recall_rate": 1.0
+    },
+    {
+      "decay_rate": 0.8,
+      "selection_rate": 1.0,
+      "recall_rate": 0.99
+    },
+    {
+      "decay_rate": 0.9,
+      "selection_rate": 1.0,
+      "recall_rate": 0.71
+    },
+    {
+      "decay_rate": 0.95,
+      "selection_rate": 1.0,
+      "recall_rate": 0.24
+    },
+    {
+      "decay_rate": 0.97,
+      "selection_rate": 1.0,
+      "recall_rate": 0.05
+    },
+    {
+      "decay_rate": 0.99,
+      "selection_rate": 1.0,
+      "recall_rate": 0.0
+    }
+  ]
+}

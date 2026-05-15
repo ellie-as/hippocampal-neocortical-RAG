@@ -1,0 +1,90 @@
+{
+  "n_samples": 10,
+  "sample_temperature": 0.5,
+  "statistics_sample_source": "matched_encoded_and_consolidated_samples",
+  "paired_n": 10,
+  "paired_distances": [
+    {
+      "sample_index": 1,
+      "encoded_distance": 0.26861176695262656,
+      "consolidated_distance": 0.443638844598497
+    },
+    {
+      "sample_index": 2,
+      "encoded_distance": 0.3507397383892369,
+      "consolidated_distance": 0.3015886337038465
+    },
+    {
+      "sample_index": 3,
+      "encoded_distance": 0.31406770092450653,
+      "consolidated_distance": 0.31406770092450653
+    },
+    {
+      "sample_index": 4,
+      "encoded_distance": 0.35917709348133453,
+      "consolidated_distance": 0.45833711201957184
+    },
+    {
+      "sample_index": 5,
+      "encoded_distance": 0.2603600400793561,
+      "consolidated_distance": 0.3295613127685364
+    },
+    {
+      "sample_index": 6,
+      "encoded_distance": 0.4105385610942722,
+      "consolidated_distance": 0.40955362944464746
+    },
+    {
+      "sample_index": 7,
+      "encoded_distance": 0.24761827275861803,
+      "consolidated_distance": 0.42547236160851576
+    },
+    {
+      "sample_index": 8,
+      "encoded_distance": 0.35951159475778294,
+      "consolidated_distance": 0.4144915167835804
+    },
+    {
+      "sample_index": 9,
+      "encoded_distance": 0.3219688928714062,
+      "consolidated_distance": 0.34360766410827637
+    },
+    {
+      "sample_index": 10,
+      "encoded_distance": 0.33011267572977143,
+      "consolidated_distance": 0.33165744935445307
+    }
+  ],
+  "encoded": {
+    "distances": [
+      0.26861176695262656,
+      0.3507397383892369,
+      0.31406770092450653,
+      0.35917709348133453,
+      0.2603600400793561,
+      0.4105385610942722,
+      0.24761827275861803,
+      0.35951159475778294,
+      0.3219688928714062,
+      0.33011267572977143
+    ],
+    "mean": 0.32227063370389114,
+    "sem": 0.016249697513911067
+  },
+  "consolidated": {
+    "distances": [
+      0.443638844598497,
+      0.3015886337038465,
+      0.31406770092450653,
+      0.45833711201957184,
+      0.3295613127685364,
+      0.40955362944464746,
+      0.42547236160851576,
+      0.4144915167835804,
+      0.34360766410827637,
+      0.33165744935445307
+    ],
+    "mean": 0.3771976225314432,
+    "sem": 0.018541175136643426
+  }
+}

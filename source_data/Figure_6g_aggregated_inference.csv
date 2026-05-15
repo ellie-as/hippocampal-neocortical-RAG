@@ -1,0 +1,23 @@
+Task,Pattern,Number of transitions,Accuracy
+Spatial,{} EAST {} WEST {},2,1.0
+Spatial,{} WEST {} EAST {},2,1.0
+Spatial,{} NORTH {} SOUTH {},2,1.0
+Spatial,{} SOUTH {} NORTH {},2,1.0
+Spatial,{} EAST {} SOUTH {} WEST {} NORTH {},4,1.0
+Spatial,{} SOUTH {} WEST {} NORTH {} EAST {},4,1.0
+Spatial,{} WEST {} NORTH {} EAST {} SOUTH {},4,1.0
+Spatial,{} NORTH {} EAST {} SOUTH {} WEST {},4,1.0
+Spatial,{} EAST {} EAST {} NORTH {} WEST {} WEST {} SOUTH {},6,1.0
+Spatial,{} NORTH {} NORTH {} WEST {} SOUTH {} SOUTH {} EAST {},6,1.0
+Spatial,{} EAST {} EAST {} SOUTH {} SOUTH {} WEST {} WEST {} NORTH {} NORTH {},8,1.0
+Spatial,{} SOUTH {} SOUTH {} WEST {} WEST {} NORTH {} NORTH {} EAST {} EAST {},8,1.0
+Family tree,{} CHILD_OF {} PARENT_OF {},2,1.0
+Family tree,{} PARENT_OF {} CHILD_OF {},2,1.0
+Family tree,{} GRANDCHILD_OF {} GRANDPARENT_OF {},2,1.0
+Family tree,{} GRANDPARENT_OF {} GRANDCHILD_OF {},2,1.0
+Family tree,{} CHILD_OF {} CHILD_OF {} PARENT_OF {} PARENT_OF {},4,1.0
+Family tree,{} PARENT_OF {} PARENT_OF {} CHILD_OF {} CHILD_OF {},4,1.0
+Family tree,{} CHILD_OF {} SPOUSE_OF {} SPOUSE_OF {} PARENT_OF {},4,1.0
+Family tree,{} PARENT_OF {} SPOUSE_OF {} SPOUSE_OF {} CHILD_OF {},4,1.0
+Family tree,{} CHILD_OF {} SPOUSE_OF {} CHILD_OF {} SPOUSE_OF {} GRANDPARENT_OF {} SIBLING_OF {},6,0.99
+Family tree,{} GRANDPARENT_OF {} SIBLING_OF {} CHILD_OF {} SPOUSE_OF {} CHILD_OF {} SPOUSE_OF {},6,1.0
