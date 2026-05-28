@@ -18,6 +18,8 @@ values are written to `source_data/`.
 
 See `FIGURES.md` for instructions for reproducing the results.
 
+> **Note:** This repo reproduces the results in the paper. See this repo for tools to use in other experiments: [llm-psychology](https://github.com/ellie-as/llm-psychology).
+
 #### Installation
 
 ```bash
